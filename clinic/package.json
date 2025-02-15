@@ -1,0 +1,15 @@
+{
+  "name": "clinic-website-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p ../../dist/clinic && cp -r ./* ../../dist/clinic"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
