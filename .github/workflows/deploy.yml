@@ -8,7 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write  # Grant permission to push to the repository (needed for gh-pages)
     steps:
       # Checkout the code from GitHub repository
       - name: Checkout repository
