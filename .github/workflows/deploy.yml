@@ -27,10 +27,7 @@ jobs:
 
       # Build the packages in the monorepo
       - name: Build packages
-        # run: lerna run build  # This will run the 'build' script in each package
-        run: |
-          cd packages/pizza-restaurant && npm run build
-          cd ../../doctors-appointment && npm run build
+        run: lerna run build  # This will run the 'build' script in each package
 
       # Deploy the built packages to GitHub Pages
       - name: Deploy to GitHub Pages
