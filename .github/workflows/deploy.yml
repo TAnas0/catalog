@@ -12,13 +12,13 @@ jobs:
     steps:
       # Checkout the code from GitHub repository
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Set up Node.js for the build process
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
       # Install dependencies for the whole monorepo
       - name: Install dependencies
