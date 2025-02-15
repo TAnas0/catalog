@@ -24,7 +24,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          lerna bootstrap  # Install dependencies for all packages
 
       # Build the packages in the monorepo
       - name: Build packages
