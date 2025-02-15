@@ -11,7 +11,7 @@ import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
-	base: "/pizzarestaurant",
+	base: "/catalog/pizzarestaurant",
 	outDir: "../../dist/pizzarestaurant",
 	// trailingSlash: 'always',
 	integrations: [
