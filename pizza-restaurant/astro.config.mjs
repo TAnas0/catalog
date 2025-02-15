@@ -11,8 +11,8 @@ import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astropie.netlify.app",
-	base: "/",
+	base: "/pizzarestaurant",
+	outDir: "../dist/pizzarestaurant",
 	// trailingSlash: 'always',
 	integrations: [
 		tailwind(),

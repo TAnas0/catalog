@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  base: "/dokto",
+  outDir: "../dist/dokto",
   integrations: [
     tailwind()
   ]
