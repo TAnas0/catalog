@@ -29,8 +29,8 @@ jobs:
       - name: Build packages
         # run: lerna run build  # This will run the 'build' script in each package
         run: |
-          cd pizzarestaurant && npm run build
-          cd ../dokto && npm run build
+          cd packages/pizza-restaurant && npm run build
+          cd ../../doctors-appointment && npm run build
 
       # Deploy the built packages to GitHub Pages
       - name: Deploy to GitHub Pages
