@@ -10,10 +10,11 @@
       class="flex items-center justify-center h-10 w-10"
       :class="activeCategory === 'all' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:first-aid-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:app-window-duotone"></iconify-icon>
     </span>
     <span>All</span>
   </button>
+
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
     :class="activeCategory === 'general' ? 'bg-muted-50 dark:bg-muted-700' : ''"
@@ -23,49 +24,53 @@
       class="flex items-center justify-center h-10 w-10"
       :class="activeCategory === 'general' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:person-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:user-circle-duotone"></iconify-icon>
     </span>
     <span>General</span>
   </button>
+
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
-    :class="activeCategory === 'cardiology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
-    @click="activeCategory = 'cardiology'"
+    :class="activeCategory === 'diagnostic_equipment' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'diagnostic_equipment'"
   >
     <span
       class="flex items-center justify-center h-10 w-10"
-      :class="activeCategory === 'cardiology' ? 'text-rose-500' : ' text-muted-400 group-hover:text-primary-500'"
+      :class="activeCategory === 'diagnostic_equipment' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:heartbeat-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:stethoscope-duotone"></iconify-icon>
     </span>
-    <span>Cardiology</span>
+    <span>Diagnostic</span>
   </button>
+
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
-    :class="activeCategory === 'neurology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
-    @click="activeCategory = 'neurology'"
+    :class="activeCategory === 'surgical' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'surgical'"
   >
     <span
       class="flex items-center justify-center h-10 w-10"
-      :class="activeCategory === 'neurology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+      :class="activeCategory === 'surgical' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:brain-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:scissors-duotone"></iconify-icon>
     </span>
-    <span>Neurology</span>
+    <span>Surgical</span>
   </button>
+
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
-    :class="activeCategory === 'gynaecology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
-    @click="activeCategory = 'gynaecology'"
+    :class="activeCategory === 'laboratory_equipment' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'laboratory_equipment'"
   >
     <span
       class="flex items-center justify-center h-10 w-10"
-      :class="activeCategory === 'gynaecology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+      :class="activeCategory === 'laboratory_equipment' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:baby-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:test-tube-duotone"></iconify-icon>
     </span>
-    <span>Gynaecology</span>
+    <span>Laboratory</span>
   </button>
+
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
     :class="activeCategory === 'surgery' ? 'bg-muted-50 dark:bg-muted-700' : ''"
@@ -75,22 +80,22 @@
       class="flex items-center justify-center h-10 w-10"
       :class="activeCategory === 'surgery' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:syringe-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:syringe-duotone"></iconify-icon>
     </span>
     <span>Surgery</span>
   </button>
 
   <button
     class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
-    :class="activeCategory === 'dermatology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
-    @click="activeCategory = 'dermatology'"
+    :class="activeCategory === 'hospital_equipment' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'hospital_equipment'"
   >
     <span
       class="flex items-center justify-center h-10 w-10"
-      :class="activeCategory === 'dermatology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+      :class="activeCategory === 'hospital_equipment' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
     >
-      <iconify-icon class="iconify w-6 h-6 flex items-center justify-center text-2xl" icon="ph:hand-soap-duotone"></iconify-icon>
+      <iconify-icon class="iconify w-6 h-6 text-2xl" icon="ph:hospital-duotone"></iconify-icon>
     </span>
-    <span>Dermatology</span>
+    <span>Hospital</span>
   </button>
 </div>
