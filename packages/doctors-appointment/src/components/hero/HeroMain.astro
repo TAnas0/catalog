@@ -5,19 +5,22 @@ import ButtonSub from "@components/base/ButtonSub.astro";
 
 <!-- class="min-h-screen w-full overflow-hidden bg-muted-100 dark:bg-muted-1000 bg-center bg-cover relative" -->
 <div
-  class="min-h-screen w-full overflow-hidden bg-muted-100  bg-center bg-cover relative"
+  class="min-h-screen w-full overflow-hidden bg-muted-100 bg-center bg-cover relative animate-fade-in-slow"
 >
   <!-- Left to right gradient overlay -->
   <!-- <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/70 to-transparent opacity-90 z-10 dark:block hidden"></div> -->
-  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgb(0,0,0,0.6),rgb(0,0,0,0.6)_25%,transparent_150%)] opacity-90 hidden dark:block z-10"></div>
+  <div
+    class="absolute inset-0 bg-[linear-gradient(to_right,rgb(0,0,0,0.6),rgb(0,0,0,0.6)_25%,transparent_150%)] opacity-90 hidden dark:block z-10"
+  >
+  </div>
   <div
     id="layer1"
-    class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-[url('img/bg1.jpg')] bg-center bg-cover z-0"
+    class="absolute inset-0 transition-opacity duration-1000 opacity-100 bg-[url('img/bg1.jpg')] bg-center bg-cover z-0 animate-fade-in"
   >
   </div>
   <div
     id="layer2"
-    class="absolute inset-0 transition-opacity duration-1000 opacity-100 bg-[url('img/bg2.jpg')] bg-center bg-cover z-0"
+    class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-center bg-cover z-0"
   >
   </div>
 
@@ -28,7 +31,7 @@ import ButtonSub from "@components/base/ButtonSub.astro";
           class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-8 ltablet:mb-0 lg:mb-0"
         >
           <div
-            class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-4 animate-fade-in-slow"
           >
             <h1
               class="font-medium text-4xl ptablet:text-5xl lg:text-5xl text-muted-800 dark:text-white"
@@ -66,9 +69,33 @@ import ButtonSub from "@components/base/ButtonSub.astro";
   </div>
 </div>
 
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+</style>
+
 <script>
   // Hero background images array
-  const images = ["img/bg1_resized.webp", "img/bg2_resized.webp", "img/bg3_resized.webp", "img/bg4_resized.webp"];
+  const images = [
+    "img/bg1_resized.webp",
+    "img/bg2_resized.webp",
+    "img/bg3_resized.webp",
+    "img/bg4_resized.webp",
+  ];
 
   let currentIndex = 0;
 
