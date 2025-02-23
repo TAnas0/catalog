@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/Default.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import Toolbar from "@components/content/doctors/grid/Toolbar.astro";
+import Filters from "@components/content/doctors/grid/Filters.astro";
+import Grid from "@components/content/doctors/grid/Grid.astro";
+---
+
+<Layout title="Home">
+
+
+  <SectionMuted class="'border-b border-muted-200 dark:border-muted-800'">
+    <Container>
+      <!-- <SectionTitle
+        title="High-Quality Medical Equipment"
+        subtitle="Providing hospitals, clinics, and laboratories with reliable and advanced medical equipment for optimal patient care."
+        minititle="Medical Equipment Solutions"
+        class="'mx-auto text-center text-primary-600'"
+      /> -->
+
+      <div id="doctors" x-data="doctors()" x-intersect="activeStep = 'spy-1'">
+        <Toolbar />
+
+        <!--Grid wrapper-->
+        <div class="py-10">
+          <div class="grid grid-cols-12 md:gap-12 pb-20">
+            <!--Filters-->
+            <div class="hidden lg:block col-span-12 lg:col-span-3">
+              <Filters />
+            </div>
+            <!--Content-->
+            <div class="col-span-12 lg:col-span-9">
+              <!--Subgrid-->
+              <Grid />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </SectionMuted>
+</Layout>
