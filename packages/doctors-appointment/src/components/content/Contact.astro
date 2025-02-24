@@ -1,0 +1,109 @@
+<div class="py-10">
+  <div class="w-full ltablet:max-w-4xl max-w-5xl mx-auto">
+    <div class="bg-primary-900 rounded-3xl shadow-xl overflow-hidden">
+      <div
+        class="flex items-center pt-10 pb-12 px-6 sm:pt-16 sm:px-16 ltablet:py-20 ltablet:pr-0 lg:py-20 lg:pr-0 xl:px-20"
+      >
+        <div class="ltablet:self-center lg:self-center font-sans">
+          <h2 class="text-3xl font-medium text-white sm:text-4xl">
+            <span class="block">Contact Us</span>
+            <span class="block">Get started in less than a minute.</span>
+          </h2>
+          <div
+            class="flex justify-center items-center bg-gray-100"
+          >
+            <form
+              action="/submit"
+              method="post"
+              class="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg flex flex-col gap-4"
+            >
+              <div class="flex flex-col">
+                <label for="first-name" class="text-gray-700 font-medium"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  required
+                  class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="last-name" class="text-gray-700 font-medium"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  required
+                  class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="email" class="text-gray-700 font-medium"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="phone" class="text-gray-700 font-medium"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="company" class="text-gray-700 font-medium"
+                  >Company</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="message" class="text-gray-700 font-medium"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  class="border border-gray-300 p-2 rounded-lg h-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style></style>
