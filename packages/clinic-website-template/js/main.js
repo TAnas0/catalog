@@ -58,7 +58,6 @@
 
     // Header carousel
     $(".header-carousel").owlCarousel({
-        autoplay: false,
         animateOut: 'fadeOutLeft',
         items: 1,
         dots: true,
@@ -67,8 +66,38 @@
         navText : [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
-        ]
+        ],
+        autoplay: true,        // Enable autoplay
+        autoplayTimeout: 2000, // Time between slides (3s)
     });
+
+    $(".featured-carousel").owlCarousel({
+        loop: true,             // Infinite loop
+        margin: 10,            // Space between items
+        nav: true,             // Navigation arrows
+        dots: true,            // Pagination dots
+        autoplay: true,        // Enable autoplay
+        autoplayTimeout: 3000, // Time between slides (3s)
+        autoplayHoverPause: true, // Pause on hover
+        responsive: {
+            0: { items: 1 },   // Show 1 item on small screens
+            768: { items: 2 }, // Show 2 items on tablets
+            1024: { items: 3 }, // Show 3 items on desktops
+            1200: { items: 4 }  // Show 4 items on large screens
+        },
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ],
+    });
+
+    // $(".custom-next").click(function() {
+    //     owl.trigger("next.owl.carousel");
+    // });
+
+    // $(".custom-prev").click(function() {
+    //     owl.trigger("prev.owl.carousel");
+    // });
 
 
     // Testimonials carousel
