@@ -14,6 +14,10 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  output: 'export',
+  // if deploying to `https://yourusername.github.io/repo-name/`
+  basePath: '/catalog/tailwind/studio',
+  assetPrefix: '/catalog/tailwind/studio',
 }
 
 function remarkMDXLayout(source, metaName) {
