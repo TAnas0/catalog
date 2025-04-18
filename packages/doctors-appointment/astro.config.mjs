@@ -8,7 +8,7 @@ const base = process.env.BASE_URL || "/catalog/dokto";
 // https://astro.build/config
 export default defineConfig({
   base,
-  outDir: "../../dist/dokto",
+  outDir: "./dist",
   integrations: [
     tailwind()
   ]
