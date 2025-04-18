@@ -2,6 +2,10 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "0.0.0",
   "packages": [
-    "packages/*"
+    "packages/clinic-website-template",
+    "packages/doctors-appointment",
+    "packages/pizza-restaurant",
+    "packages/keynote",
+    "packages/studio"
   ]
 }
