@@ -35,9 +35,9 @@ jobs:
           cp -R packages/clinic-website-template/ dist/clinic
           cp -R packages/doctors-appointment/dist dist/dokto
           mkdir -p dist/tailwind/keynote && cp -R packages/keynote/.next/* dist/tailwind/keynote
-          mkdir -p dist/tailwind/radiant && cp -R packages/radiant/.next/* dist/tailwind/radiant
-          mkdir -p dist/tailwind/spotlight && cp -R packages/spotlight/.next/* dist/tailwind/spotlight
           mkdir -p dist/tailwind/studio && cp -R packages/studio/.next/* dist/tailwind/studio
+          # mkdir -p dist/tailwind/radiant && cp -R packages/radiant/.next/* dist/tailwind/radiant
+          # mkdir -p dist/tailwind/spotlight && cp -R packages/spotlight/.next/* dist/tailwind/spotlight
       # Deploy the built packages to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
